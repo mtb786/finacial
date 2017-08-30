@@ -10,8 +10,7 @@ app.use('/',(req,res)=>{
 })
 
 // app.use('/users',require('./routes/users'));
-
-app.set( 'port', ( process.env.PORT || 5000 ));
-app.listen( app.get( 'port' ), function() {
+var port = process.env.PORT || 8080;
+app.listen( port, function() {
   console.log( 'Node server is running on port ' + app.get( 'port' ));
   });
